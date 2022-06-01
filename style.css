@@ -827,6 +827,7 @@ button:hover {
 }
 
 .form {
+    position: relative;
     margin-top: 40px;
     box-sizing: border-box;
     width: 440px !important;
@@ -857,13 +858,21 @@ select:focus {
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 input[type="number"]::placeholder {
-    color: black;
+    color: black !important;
 }
 
 select {
     appearance: none;
-    background: url('./img/select-strelka.svg') no-repeat right;
+    background: url('./img/strelka.svg') no-repeat right;
     cursor: pointer;
+    position: relative;
+}
+
+.js-validate-error-label {
+    position: relative;
+    top: -25px;
+    left: 0;
+    font-size: 14px;
 }
 
 .form-btn {
@@ -891,13 +900,14 @@ button:hover {
     margin-bottom: 0;
     background: #F7F7F7;
     box-shadow: 0px -4px 12px #DFDFDF;
-    height: 201px;
+    height: 140px;
     width: 100%;
 }
 
 .footer .container {
     display: flex;
-    padding-top: 40px;
+    box-sizing: border-box;
+    padding-top: 30px;
 }
 
 .footer-contacts {
@@ -912,21 +922,21 @@ button:hover {
 
 .footer-title {
     font-weight: 500;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 32px;
+    line-height: 20px;
     color: #000000;
     margin-bottom: 16px;
 }
 
 .footer-mail {
     font-size: 20px;
-    line-height: 23px;
+    line-height: 12px;
     color: #000000;
     margin-bottom: 16px;
 }
 
 .footer-phone {
     font-size: 20px;
-    line-height: 23px;
+    line-height: 12px;
     color: #000000;
 }

@@ -875,17 +875,19 @@
                         <p class="sec-8-sub">
                             Оставьте заявку на бронь, и наш менеджер свяжется с вами
                         </p>
-                        <form action="send.php" method="post" id="form" class="form">
-                            <input type="text" class="name" placeholder="Имя" required>
-                            <select name="type-rooms" id="type-rooms" placeholder="Тип помещения" required>
-                                <option value="Тип помещения" class="type-room">Тип помещения</option>
+                        <form action="./send.php" enctype="multipart/form-data" method="post" id="form" class="form">
+                            <input type="hidden" name="admin_email[]" value="mishayugai53@gmail.com">
+                            <input type="hidden" name="form_subject" value="Тема письма">
+                            <input name="ФИО" type="text" class="name" data-validate-field="name" placeholder="Имя" required>
+                            <select name="Тип комнаты" id="type-rooms" data-validate-field="select" required>
+                                <option value="Тип помещения" class="type-room"  selected disabled>Тип помещения</option>
                                 <option value="Бюджет" class="type-room">Бюджет</option>
                                 <option value="Эконом" class="type-room">Эконом</option>
                                 <option value="Комфорт" class="type-room">Комфорт</option>
                                 <option value="Квартира-студия" class="type-room">Квартира-студия</option>
                             </select>
-                            <input type="email" class="mail" placeholder="Email" required>
-                            <input type="number" class="phone" placeholder="Телефон" required>
+                            <input name="Почта" type="email" data-validate-field="email" class="mail" placeholder="Email" required>
+                            <input name="Телефон" type="tel" data-validate-field="tel" class="phone" placeholder="Телефон" required>
                             <button type="submit" id="form-btn" class="form-btn">
                                 Забронировать
                             </button>
@@ -915,6 +917,9 @@
     </div>
     <script type="text/javascript " src="./slick/slick.js "></script>
     <script type="text/javascript " src="./slick/slick.min.js "></script>
+    <script src="./inputmask.min.js"></script>
+    <script src="./just-validate.min.js"></script>
+    <script src="./carousel.js"></script>
     <script src="./main.js "></script>
 </body>
 
