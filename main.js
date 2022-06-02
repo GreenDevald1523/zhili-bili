@@ -41,7 +41,6 @@ let validateForms = function(selector, rules, successModal, yaGoal) {
                 xhr.send(formData)
 
                 form.reset()
-                alert('Ваша заявка отправлена!')
             }
         }
     })
