@@ -1303,6 +1303,11 @@ button:active {
         top: 35px;
         width: 200px;
     }
+    .sec-7 .sec-4-title-underline {
+        width: 110px;
+        left: -5px;
+        top: 35px;
+    }
     .sec-4-room-title {
         font-size: 28px;
     }
@@ -1684,5 +1689,17 @@ button:active {
     }
     .room-things-col:first-child {
         margin-right: 20px;
+    }
+    .sec-6 .sec-4-title-underline {
+        width: 125px;
+        left: 155px;
+    }
+    .sec-4 .sec-4-title-underline {
+        width: 185px;
+        left: 80px;
+    }
+    .sec-3 .sec-3-title-underline {
+        width: 205px;
+        left: 85px;
     }
 }
